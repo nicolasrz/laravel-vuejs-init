@@ -1,10 +1,10 @@
-require('./bootstrap');
 import Vue from "vue";
 
-import Home from "./components/Home.vue";
+import App from "./App.vue";
+import router from "./routes.js"
 
-
-const home = new Vue({
-    el: '#home',
-    components: { Home }
+const app = new Vue({
+    el: '#app',
+    router: router,
+    render: h => h(App)
 });
